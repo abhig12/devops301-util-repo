@@ -1,5 +1,7 @@
 provider "aws" {
   region = "ap-south-1"
+  access_key = "${env.access_key}"
+  secret_key = "${env.secret_key}"
 }
 
 resource "aws_instance" "instance" {
