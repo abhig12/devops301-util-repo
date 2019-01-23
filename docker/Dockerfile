@@ -7,4 +7,4 @@ RUN sed -i 's/port="8080"/port="8082"/' /var/lib/tomcat8/conf/server.xml
 RUN echo "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> /etc/default/tomcat8
 EXPOSE 8082
 CMD service tomcat8 start && tail -f /var/lib/tomcat8/logs/catalina.out
-COPY target/*.war /var/lib/tomcat8/webapps/
+COPY gameoflife-web/target/*.war /var/lib/tomcat8/webapps/
